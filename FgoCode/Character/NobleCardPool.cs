@@ -253,7 +253,7 @@ static class NobleHideBannerPatch
     private static readonly FieldInfo BannerField =
         AccessTools.Field(typeof(NCard), "_banner")!;
     private static readonly FieldInfo ModelField =
-        AccessTools.Field(typeof(NCard), "Model")!;
+        AccessTools.Field(typeof(NCard), "_model")!;
 
     [HarmonyPostfix]
     static void HideBanner(NCard __instance)
