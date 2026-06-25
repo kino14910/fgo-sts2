@@ -16,7 +16,7 @@ public class ForcedNpCardPower : FgoPower
     {
         if (cardPlay.Card is not NobleCard) return;
         Flash();
-        FgoCardActions.ForceNextNpCard(Owner.Player);
+        FgoCardActions.ForceNextNpCard(Owner.Player!);
         await PowerCmd.Decrement(this);
     }
 }

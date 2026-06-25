@@ -18,7 +18,7 @@ public class MagicBulletCharging : FgoCard
         var energy = play.Resources.EnergySpent;
         if (energy <= 0) return;
 
-        var attacks = Owner.PlayerCombatState.Hand.Cards
+        var attacks = Owner.PlayerCombatState!.Hand.Cards
             .Where(card => card.Type == CardType.Attack)
             .Take(energy)
             .ToList();

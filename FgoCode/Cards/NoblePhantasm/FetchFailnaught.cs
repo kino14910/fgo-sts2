@@ -7,8 +7,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class FetchFailnaught : NobleCard
 {
-    public FetchFailnaught() : base(1, CardType.Attack,
-        CardRarity.Rare, TargetType.AnyEnemy)
+    public FetchFailnaught() : base(1, CardType.Attack, TargetType.AnyEnemy)
     {
         WithDamage(30, 8);
         WithVar("CurseMultiplier", 1, 1);

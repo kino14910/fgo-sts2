@@ -2,15 +2,13 @@ using Fgo.FgoCode.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Nodes.CommonUi;
 
 namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class SecondLife : NobleCard
 {
-    public SecondLife() : base(1, CardType.Skill,
-        CardRarity.Rare, TargetType.Self)
+    public SecondLife() : base(1, CardType.Skill, TargetType.Self)
     {
         WithKeywords(CardKeyword.Exhaust);
     }

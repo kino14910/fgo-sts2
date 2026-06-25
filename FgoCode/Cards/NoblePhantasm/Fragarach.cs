@@ -7,8 +7,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class Fragarach : NobleCard
 {
-    public Fragarach() : base(1, CardType.Power,
-        CardRarity.Rare, TargetType.Self)
+    public Fragarach() : base(1, CardType.Power, TargetType.Self)
     {
         WithDamage(15, 5);
     }

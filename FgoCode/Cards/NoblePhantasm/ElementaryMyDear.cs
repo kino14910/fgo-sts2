@@ -2,15 +2,13 @@ using BaseLib.Utils;
 using Fgo.FgoCode.Powers;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class ElementaryMyDear : NobleCard
 {
-    public ElementaryMyDear() : base(1, CardType.Power,
-        CardRarity.Rare, TargetType.Self)
+    public ElementaryMyDear() : base(1, CardType.Power, TargetType.Self)
     {
         WithPower<VulnerablePower>(1);
     }

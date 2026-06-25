@@ -3,15 +3,13 @@ using Fgo.FgoCode.Powers;
 using Fgo.FgoCode.Utils;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class Desterrennacht : NobleCard
 {
-    public Desterrennacht() : base(2, CardType.Power,
-        CardRarity.Rare, TargetType.Self)
+    public Desterrennacht() : base(2, CardType.Power, TargetType.Self)
     {
         WithTags(FgoEnums.Foreigner);
         WithPower<StrengthPower>(2, 1);

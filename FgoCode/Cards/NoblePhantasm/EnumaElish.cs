@@ -6,8 +6,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class EnumaElish : NobleCard
 {
-    public EnumaElish() : base(2, CardType.Attack,
-        CardRarity.Rare, TargetType.Self)
+    public EnumaElish() : base(2, CardType.Attack, TargetType.Self)
     {
         WithDamage(32, 8);
     }

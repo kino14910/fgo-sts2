@@ -8,8 +8,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class LostLonginus : NobleCard
 {
-    public LostLonginus() : base(2, CardType.Attack,
-        CardRarity.Rare, TargetType.Self)
+    public LostLonginus() : base(2, CardType.Attack, TargetType.Self)
     {
         WithDamage(24, 6);
         WithPower<RegenPower>(6, 3);

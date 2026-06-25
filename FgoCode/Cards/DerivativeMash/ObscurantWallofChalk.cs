@@ -2,7 +2,6 @@ using BaseLib.Utils;
 using Fgo.FgoCode.Cards.NoblePhantasm;
 using Fgo.FgoCode.Commands;
 using Fgo.FgoCode.Powers;
-using Fgo.FgoCode.Utils;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 
@@ -10,8 +9,7 @@ namespace Fgo.FgoCode.Cards.DerivativeMash;
 
 public class ObscurantWallofChalk : NobleCard
 {
-    public ObscurantWallofChalk() : base(0, CardType.Skill,
-        FgoEnums.NoblePhantasm, TargetType.Self)
+    public ObscurantWallofChalk() : base(0, CardType.Skill, TargetType.Self)
     {
         WithNp(30, 20);
     }

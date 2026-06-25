@@ -7,8 +7,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class LastSunXibalba : NobleCard
 {
-    public LastSunXibalba() : base(3, CardType.Attack,
-        CardRarity.Rare, TargetType.Self)
+    public LastSunXibalba() : base(3, CardType.Attack, TargetType.Self)
     {
         WithDamage(6, 2);
         WithStar(10);

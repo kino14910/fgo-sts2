@@ -8,8 +8,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class InnocenceAroundight : NobleCard
 {
-    public InnocenceAroundight() : base(2, CardType.Attack,
-        CardRarity.Rare, TargetType.AnyEnemy)
+    public InnocenceAroundight() : base(2, CardType.Attack, TargetType.AnyEnemy)
     {
         WithDamage(32, 8);
         WithPower<NpRatePower>(3);

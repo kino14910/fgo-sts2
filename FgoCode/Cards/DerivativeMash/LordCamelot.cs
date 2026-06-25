@@ -9,8 +9,7 @@ namespace Fgo.FgoCode.Cards.DerivativeMash;
 
 public class LordCamelot : NobleCard
 {
-    public LordCamelot() : base(1, CardType.Power,
-        CardRarity.Status, TargetType.Self)
+    public LordCamelot() : base(1, CardType.Power, TargetType.Self)
     {
         WithPower<PlatingPower>(1, 1);
         WithVar("DamageReduction", 30, 20);

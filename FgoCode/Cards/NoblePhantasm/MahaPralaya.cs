@@ -7,8 +7,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class MahaPralaya : NobleCard
 {
-    public MahaPralaya() : base(3, CardType.Attack,
-        CardRarity.Rare, TargetType.Self)
+    public MahaPralaya() : base(3, CardType.Attack, TargetType.Self)
     {
         WithDamage(8, 3);
     }

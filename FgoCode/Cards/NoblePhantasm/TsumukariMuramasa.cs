@@ -8,8 +8,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class TsumukariMuramasa : NobleCard
 {
-    public TsumukariMuramasa() : base(3, CardType.Attack,
-        CardRarity.Rare, TargetType.Self)
+    public TsumukariMuramasa() : base(3, CardType.Attack, TargetType.Self)
     {
         WithDamage(6, 2);
     }

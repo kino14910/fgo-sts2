@@ -11,8 +11,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class ExcaliburExcelsus : NobleCard
 {
-    public ExcaliburExcelsus() : base(3, CardType.Attack,
-        CardRarity.Rare, TargetType.Self)
+    public ExcaliburExcelsus() : base(3, CardType.Attack, TargetType.Self)
     {
         WithDamage(16, 6);
         WithBlock(6);

@@ -2,15 +2,12 @@ using BaseLib.Utils;
 using Fgo.FgoCode.Powers;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class RoadlessCamelot : NobleCard
 {
-    public RoadlessCamelot() : base(3, CardType.Attack,
-        CardRarity.Rare, TargetType.Self)
+    public RoadlessCamelot() : base(3, CardType.Attack, TargetType.Self)
     {
         WithDamage(24, 8);
         WithVar("Curse", 3);

@@ -4,6 +4,7 @@ using BaseLib.Utils;
 using Fgo.FgoCode.Character;
 using Fgo.FgoCode.Extensions;
 using Fgo.FgoCode.Singletons;
+using Fgo.FgoCode.Utils;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 
@@ -12,13 +13,14 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 [Pool(typeof(NobleCardPool))]
 public abstract class NobleCard : ConstructedCardModel
 {
-    public override string CustomPortraitPath => $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigNobleCardImagePath();
-
-    protected NobleCard(int cost, CardType type, CardRarity rarity, TargetType target)
-        : base(cost, type, rarity, target)
+    protected NobleCard(int cost, CardType type, TargetType target)
+        : base(cost, type, FgoEnums.NoblePhantasm, target)
     {
         WithKeywords(CardKeyword.Retain, CardKeyword.Exhaust);
     }
+
+    public override string CustomPortraitPath =>
+        $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigNobleCardImagePath();
 
     public override Task AfterCardPlayed(PlayerChoiceContext context, CardPlay cardPlay)
     {

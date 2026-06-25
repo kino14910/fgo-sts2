@@ -1,4 +1,3 @@
-using BaseLib.Utils;
 using Fgo.FgoCode.Commands;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -10,8 +9,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class HollowHeartAlbion : NobleCard
 {
-    public HollowHeartAlbion() : base(2, CardType.Attack,
-        CardRarity.Rare, TargetType.Self)
+    public HollowHeartAlbion() : base(2, CardType.Attack, TargetType.Self)
     {
         WithVars(new DamageVar(27m, ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move));
         WithStar(10, 4);

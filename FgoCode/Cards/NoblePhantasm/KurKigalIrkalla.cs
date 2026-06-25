@@ -10,8 +10,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class KurKigalIrkalla : NobleCard
 {
-    public KurKigalIrkalla() : base(1, CardType.Attack,
-        CardRarity.Rare, TargetType.Self)
+    public KurKigalIrkalla() : base(1, CardType.Attack, TargetType.Self)
     {
         WithDamage(26, 8);
     }

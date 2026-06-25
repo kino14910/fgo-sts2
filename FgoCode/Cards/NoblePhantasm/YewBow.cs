@@ -1,5 +1,4 @@
 using BaseLib.Utils;
-using Fgo.FgoCode.Powers;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models.Powers;
@@ -8,8 +7,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class YewBow : NobleCard
 {
-    public YewBow() : base(1, CardType.Attack,
-        CardRarity.Uncommon, TargetType.AnyEnemy)
+    public YewBow() : base(1, CardType.Attack, TargetType.AnyEnemy)
     {
         WithDamage(6, 3);
     }

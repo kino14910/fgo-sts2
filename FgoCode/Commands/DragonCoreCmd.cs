@@ -11,7 +11,8 @@ public static class DragonCoreCmd
     public static async Task Execute(PlayerChoiceContext choiceContext, Creature owner, bool upgraded)
     {
         var player = owner.Player;
-        var cards = player.PlayerCombatState.Hand.Cards
+        if (player == null) return;
+        var cards = player.PlayerCombatState!.Hand.Cards
             .Where(card => card.Type != CardType.Attack)
             .ToList();
 

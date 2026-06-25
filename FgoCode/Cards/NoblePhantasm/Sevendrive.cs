@@ -8,8 +8,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class Sevendrive : NobleCard
 {
-    public Sevendrive() : base(3, CardType.Attack,
-        CardRarity.Rare, TargetType.Self)
+    public Sevendrive() : base(3, CardType.Attack, TargetType.Self)
     {
         WithDamage(12, 4);
         WithVar("Strength", 2);

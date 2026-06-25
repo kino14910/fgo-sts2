@@ -16,7 +16,7 @@ public class TameshiMono : FgoCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        var cards = Owner.PlayerCombatState.DiscardPile.Cards
+        var cards = Owner.PlayerCombatState!.DiscardPile.Cards
             .Take(DynamicVars["ExhaustCount"].IntValue)
             .ToList();
 

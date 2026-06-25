@@ -17,7 +17,7 @@ public class ProofAndRebuttal : FgoColorlessCard
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CardPileCmd.Draw(choiceContext, 1m, Owner);
-        var handCount = Owner.PlayerCombatState.Hand.Cards.Count;
+        var handCount = Owner.PlayerCombatState!.Hand.Cards.Count;
         if (handCount == 0) return;
 
         var prefs = new CardSelectorPrefs(new LocString("Fgo", "TOP_DECK_CARDS"), 0, handCount)

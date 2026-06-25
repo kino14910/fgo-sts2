@@ -8,8 +8,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class ExcaliburGalatine : NobleCard
 {
-    public ExcaliburGalatine() : base(2, CardType.Attack,
-        CardRarity.Rare, TargetType.Self)
+    public ExcaliburGalatine() : base(2, CardType.Attack, TargetType.Self)
     {
         WithDamage(24, 6);
         WithPower<VigorPower>(4);

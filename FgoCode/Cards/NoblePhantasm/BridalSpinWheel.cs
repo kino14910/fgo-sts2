@@ -8,8 +8,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class BridalSpinWheel : NobleCard
 {
-    public BridalSpinWheel() : base(1, CardType.Skill,
-        CardRarity.Rare, TargetType.Self)
+    public BridalSpinWheel() : base(1, CardType.Skill, TargetType.Self)
     {
         WithPower<PlatingPower>(2, 1);
         WithStar(8, 4);

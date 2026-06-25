@@ -12,8 +12,7 @@ namespace Fgo.FgoCode.Cards.DerivativeMash;
 
 public class LordChaldeas : NobleCard
 {
-    public LordChaldeas() : base(1, CardType.Power,
-        CardRarity.Status, TargetType.Self)
+    public LordChaldeas() : base(1, CardType.Power, TargetType.Self)
     {
         WithVar("DamageReduction", 30, 20);
         WithPower<PlatingPower>(5, 5);
@@ -33,7 +32,7 @@ public class LordChaldeas : NobleCard
         await CardCmd.Transform(this, ModelDb.Card<LordChaldeasAtlas>().ToMutable(), CardPreviewStyle.None);
 
         // 时为朦胧的白垩之壁变为测定时间的紫弹之薪
-        var chalk = Owner.PlayerCombatState.Hand.Cards
+        var chalk = Owner.PlayerCombatState!.Hand.Cards
             .FirstOrDefault(card => card is ObscurantWallofChalk);
         if (chalk != null)
             await CardCmd.Transform(chalk, ModelDb.Card<TimewornBulletKindling>().ToMutable(), CardPreviewStyle.None);

@@ -8,8 +8,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class Overload : NobleCard
 {
-    public Overload() : base(2, CardType.Attack,
-        CardRarity.Rare, TargetType.AnyEnemy)
+    public Overload() : base(2, CardType.Attack, TargetType.AnyEnemy)
     {
         WithDamage(10, 4);
     }

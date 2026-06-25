@@ -7,8 +7,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class LieLikeVortigern : NobleCard
 {
-    public LieLikeVortigern() : base(3, CardType.Attack,
-        CardRarity.Rare, TargetType.Self)
+    public LieLikeVortigern() : base(3, CardType.Attack, TargetType.Self)
     {
         WithDamage(25, 7);
         WithPower<IntangiblePower>(1);

@@ -12,7 +12,7 @@ public static class BlessedScionCmd
     public static async Task Execute(PlayerChoiceContext choiceContext, Creature owner, int count)
     {
         var player = owner.Player;
-        var selectable = player.PlayerCombatState.Hand.Cards.ToList();
+        var selectable = player!.PlayerCombatState!.Hand.Cards.ToList();
         if (selectable.Count == 0) return;
 
         var prefs = new CardSelectorPrefs(new LocString("Fgo", "COPY_CARDS"), 0, Math.Min(count, selectable.Count))

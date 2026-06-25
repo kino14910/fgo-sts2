@@ -7,8 +7,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class Excalibur : NobleCard
 {
-    public Excalibur() : base(2, CardType.Attack,
-        CardRarity.Rare, TargetType.Self)
+    public Excalibur() : base(2, CardType.Attack, TargetType.Self)
     {
         WithDamage(25, 7);
         WithNp(30);

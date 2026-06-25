@@ -15,7 +15,7 @@ public class TheOneWhoSawItAll : FgoCard
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        var attack = Owner.PlayerCombatState.DrawPile.Cards
+        var attack = Owner.PlayerCombatState!.DrawPile.Cards
             .Where(card => card.Type == CardType.Attack)
             .OrderBy(_ => Random.Shared.Next())
             .FirstOrDefault();

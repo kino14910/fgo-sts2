@@ -8,8 +8,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class GreatRamNautilus : NobleCard
 {
-    public GreatRamNautilus() : base(1, CardType.Attack,
-        CardRarity.Uncommon, TargetType.AnyEnemy)
+    public GreatRamNautilus() : base(1, CardType.Attack, TargetType.AnyEnemy)
     {
         WithDamage(40, 12);
         WithEnergy(1);

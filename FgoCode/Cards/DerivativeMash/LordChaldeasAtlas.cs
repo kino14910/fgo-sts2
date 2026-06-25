@@ -13,7 +13,7 @@ namespace Fgo.FgoCode.Cards.DerivativeMash;
 public class LordChaldeasAtlas : NobleCard
 {
     public LordChaldeasAtlas() : base(1, CardType.Attack,
-        CardRarity.Status, TargetType.AnyEnemy)
+        TargetType.AnyEnemy)
     {
         WithDamage(20, 10);
         WithPower<NpDamagePower>(30);

@@ -7,8 +7,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class GardenOfAvalon : NobleCard
 {
-    public GardenOfAvalon() : base(3, CardType.Power,
-        CardRarity.Rare, TargetType.Self)
+    public GardenOfAvalon() : base(3, CardType.Power, TargetType.Self)
     {
         WithBlock(3, 2);
     }

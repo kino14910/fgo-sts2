@@ -10,8 +10,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class CodeOriginalSin : NobleCard
 {
-    public CodeOriginalSin() : base(1, CardType.Attack,
-        CardRarity.Rare, TargetType.Self)
+    public CodeOriginalSin() : base(1, CardType.Attack, TargetType.Self)
     {
         WithDamage(40, 8);
         WithNp(20);

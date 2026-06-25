@@ -12,8 +12,7 @@ namespace Fgo.FgoCode.Cards.DerivativeMash;
 /// </summary>
 public class Camelot : NobleCard
 {
-    public Camelot() : base(1, CardType.Power,
-        CardRarity.Status, TargetType.Self)
+    public Camelot() : base(1, CardType.Power, TargetType.Self)
     {
         WithPower<PlatingPower>(1, 1);
         WithVar("DamageReduction", 20, 10);

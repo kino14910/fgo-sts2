@@ -8,8 +8,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class BeautifulJourney : NobleCard
 {
-    public BeautifulJourney() : base(2, CardType.Attack,
-        CardRarity.Rare, TargetType.Self)
+    public BeautifulJourney() : base(2, CardType.Attack, TargetType.Self)
     {
         WithDamage(24, 6);
         WithNp(20);

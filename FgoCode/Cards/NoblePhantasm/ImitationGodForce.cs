@@ -7,8 +7,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class ImitationGodForce : NobleCard
 {
-    public ImitationGodForce() : base(2, CardType.Attack,
-        CardRarity.Rare, TargetType.Self)
+    public ImitationGodForce() : base(2, CardType.Attack, TargetType.Self)
     {
         WithDamage(8, 3);
         WithPower<WeakPower>(2);

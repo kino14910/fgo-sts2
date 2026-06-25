@@ -8,8 +8,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class Failnaught : NobleCard
 {
-    public Failnaught() : base(0, CardType.Attack,
-        CardRarity.Rare, TargetType.AnyEnemy)
+    public Failnaught() : base(0, CardType.Attack, TargetType.AnyEnemy)
     {
         WithVars(new DamageVar(48m, ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move));
     }

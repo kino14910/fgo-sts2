@@ -6,8 +6,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class SuitenNikko : NobleCard
 {
-    public SuitenNikko() : base(1, CardType.Skill,
-        CardRarity.Rare, TargetType.Self)
+    public SuitenNikko() : base(1, CardType.Skill, TargetType.Self)
     {
         WithNp(30, 5);
     }

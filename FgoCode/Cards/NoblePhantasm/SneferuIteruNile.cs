@@ -8,8 +8,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class SneferuIteruNile : NobleCard
 {
-    public SneferuIteruNile() : base(2, CardType.Attack,
-        CardRarity.Rare, TargetType.Self)
+    public SneferuIteruNile() : base(2, CardType.Attack, TargetType.Self)
     {
         WithDamage(35, 10);
         WithPower<VulnerablePower>(3);

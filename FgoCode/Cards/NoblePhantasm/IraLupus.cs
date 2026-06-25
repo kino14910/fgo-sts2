@@ -10,8 +10,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class IraLupus : NobleCard
 {
-    public IraLupus() : base(1, CardType.Attack,
-        CardRarity.Rare, TargetType.AnyEnemy)
+    public IraLupus() : base(1, CardType.Attack, TargetType.AnyEnemy)
     {
         WithVars(new DamageVar(24m, ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move));
         WithPower<VulnerablePower>(2, 1);

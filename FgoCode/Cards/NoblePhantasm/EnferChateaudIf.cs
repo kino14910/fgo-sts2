@@ -1,4 +1,3 @@
-using Fgo.FgoCode.Commands;
 using Fgo.FgoCode.Relics;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -9,8 +8,7 @@ namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class EnferChateaudIf : NobleCard
 {
-    public EnferChateaudIf() : base(1, CardType.Power,
-        CardRarity.Rare, TargetType.Self)
+    public EnferChateaudIf() : base(1, CardType.Power, TargetType.Self)
     {
     }
 

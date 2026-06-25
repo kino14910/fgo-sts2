@@ -2,15 +2,13 @@ using BaseLib.Utils;
 using Fgo.FgoCode.Powers;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
 public class AroundCaliburn : NobleCard
 {
-    public AroundCaliburn() : base(2, CardType.Power,
-        CardRarity.Rare, TargetType.Self)
+    public AroundCaliburn() : base(2, CardType.Power, TargetType.Self)
     {
         WithPower<StrengthPower>(4);
         WithVar("AntiPurge", 1, 1);
