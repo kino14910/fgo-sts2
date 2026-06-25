@@ -1,0 +1,45 @@
+{
+  "FGO.mod_title": "Fgo",
+
+  "FGO-BASE_NP_PER_COST.title": "NP Gain per Cost",
+  "FGO-BASE_NP_PER_COST.sliderFormat": "{0:0}%",
+  "FGO-BASE_NP_PER_COST.hover.desc": "How much Noble Phantasm Gauge you gain for each point of energy spent on non-NP cards.",
+
+  "FGO-ENABLE_COLORLESS_CARDS.title": "Enable Colorless Cards (Requires game restart)",
+  "FGO-ENABLE_COLORLESS_CARDS.hover.desc": "Adds colorless cards to the card pool. Requires a game restart to take effect.",
+
+  "FGO-ENABLE_PADORU.title": "Enable Christmas Easter Egg",
+  "FGO-ENABLE_PADORU.hover.desc": "Enables special Christmas-themed content.",
+
+  "FGO-ENABLE_FTUE.title": "Enable Ftue",
+  "FGO-ENABLE_FTUE.hover.desc": "Enables the first-time user experience tutorial.",
+
+  "FGO-ENABLE_NO_COST_NOBLE_PHANTASM.title": "Enable No Cost Noble Phantasm (Requires game restart)",
+  "FGO-ENABLE_NO_COST_NOBLE_PHANTASM.hover.desc": "Makes Noble Phantasm cards cost 0 energy. Requires a game restart to take effect.",
+
+  "FGO-ENEMIES.title": "Enemies",
+
+  "FGO-ENABLE_ENEMIES.title": "Enable Enemies (Requires game restart)",
+  "FGO-ENABLE_ENEMIES.hover.desc": "Master toggle for all FGO enemy encounters. Requires a game restart to take effect.",
+
+  "FGO-ENABLE_EMIYA.title": "Emiya",
+  "FGO-ENABLE_EMIYA.hover.desc": "Enable Emiya as an enemy encounter. Requires 'Enable Enemies' to be on.",
+
+  "FGO-ENABLE_CALAMITY_OF_NORWICH.title": "Calamity of Norwich",
+  "FGO-ENABLE_CALAMITY_OF_NORWICH.hover.desc": "Enable Calamity of Norwich as an enemy encounter. Requires 'Enable Enemies' to be on.",
+
+  "FGO-ENABLE_CERNUNNOS.title": "Cernunnos",
+  "FGO-ENABLE_CERNUNNOS.hover.desc": "Enable Cernunnos as an enemy encounter. Requires 'Enable Enemies' to be on.",
+
+  "FGO-ENABLE_FAERIE_KNIGHT_GAWAIN.title": "Faerie Knight Gawain",
+  "FGO-ENABLE_FAERIE_KNIGHT_GAWAIN.hover.desc": "Enable Faerie Knight Gawain as an enemy encounter. Requires 'Enable Enemies' to be on.",
+
+  "FGO-ENABLE_FAERIE_KNIGHT_LANCELOT.title": "Faerie Knight Lancelot",
+  "FGO-ENABLE_FAERIE_KNIGHT_LANCELOT.hover.desc": "Enable Faerie Knight Lancelot as an enemy encounter. Requires 'Enable Enemies' to be on.",
+
+  "FGO-ENABLE_MOSS.title": "Moss",
+  "FGO-ENABLE_MOSS.hover.desc": "Enable Moss as an enemy encounter. Requires 'Enable Enemies' to be on.",
+
+  "FGO-ENABLE_QUEEN_MORGAN.title": "Queen Morgan",
+  "FGO-ENABLE_QUEEN_MORGAN.hover.desc": "Enable Queen Morgan as an enemy encounter. Requires 'Enable Enemies' to be on."
+}

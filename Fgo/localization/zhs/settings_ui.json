@@ -1,0 +1,45 @@
+{
+  "FGO.mod_title": "Fgo",
+
+  "FGO-BASE_NP_PER_COST.title": "每费用获得的宝具值",
+  "FGO-BASE_NP_PER_COST.sliderFormat": "{0:0}%",
+  "FGO-BASE_NP_PER_COST.hover.desc": "打出非宝具卡时，每消耗1点能量可获取的宝具值。",
+
+  "FGO-ENABLE_COLORLESS_CARDS.title": "启用无色卡（需要重启游戏）",
+  "FGO-ENABLE_COLORLESS_CARDS.hover.desc": "将无色卡加入牌池，需要重启游戏后生效。",
+
+  "FGO-ENABLE_PADORU.title": "启用圣诞节彩蛋",
+  "FGO-ENABLE_PADORU.hover.desc": "启用圣诞主题的特殊内容。",
+
+  "FGO-ENABLE_FTUE.title": "启用新手教程",
+  "FGO-ENABLE_FTUE.hover.desc": "启用首次游戏的新手引导教程。",
+
+  "FGO-ENABLE_NO_COST_NOBLE_PHANTASM.title": "启用宝具卡无消耗（需要重启游戏）",
+  "FGO-ENABLE_NO_COST_NOBLE_PHANTASM.hover.desc": "使宝具牌消耗为0能量，需要重启游戏后生效。",
+
+  "FGO-ENEMIES.title": "敌方角色",
+
+  "FGO-ENABLE_ENEMIES.title": "启用敌对（需要重启游戏）",
+  "FGO-ENABLE_ENEMIES.hover.desc": "控制所有FGO敌方遭遇的主开关，需要重启游戏后生效。",
+
+  "FGO-ENABLE_EMIYA.title": "卫宫",
+  "FGO-ENABLE_EMIYA.hover.desc": "启用卫宫作为敌方遭遇，需要开启「启用敌对」。",
+
+  "FGO-ENABLE_CALAMITY_OF_NORWICH.title": "诺里奇的灾难",
+  "FGO-ENABLE_CALAMITY_OF_NORWICH.hover.desc": "启用诺里奇的灾难作为敌方遭遇，需要开启「启用敌对」。",
+
+  "FGO-ENABLE_CERNUNNOS.title": "科尔努诺斯",
+  "FGO-ENABLE_CERNUNNOS.hover.desc": "启用科尔努诺斯作为敌方遭遇，需要开启「启用敌对」。",
+
+  "FGO-ENABLE_FAERIE_KNIGHT_GAWAIN.title": "妖精骑士高文",
+  "FGO-ENABLE_FAERIE_KNIGHT_GAWAIN.hover.desc": "启用妖精骑士高文作为敌方遭遇，需要开启「启用敌对」。",
+
+  "FGO-ENABLE_FAERIE_KNIGHT_LANCELOT.title": "妖精骑士兰斯洛特",
+  "FGO-ENABLE_FAERIE_KNIGHT_LANCELOT.hover.desc": "启用妖精骑士兰斯洛特作为敌方遭遇，需要开启「启用敌对」。",
+
+  "FGO-ENABLE_MOSS.title": "莫斯",
+  "FGO-ENABLE_MOSS.hover.desc": "启用莫斯作为敌方遭遇，需要开启「启用敌对」。",
+
+  "FGO-ENABLE_QUEEN_MORGAN.title": "摩根女王",
+  "FGO-ENABLE_QUEEN_MORGAN.hover.desc": "启用摩根女王作为敌方遭遇，需要开启「启用敌对」。"
+}

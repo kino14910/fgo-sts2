@@ -1,0 +1,27 @@
+using Fgo.FgoCode.Extensions;
+using MegaCrit.Sts2.Core.Combat;
+using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Creatures;
+using MegaCrit.Sts2.Core.Entities.Powers;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+
+namespace Fgo.FgoCode.Powers;
+
+public class SchwarzwaldFalkePower : FgoPower
+{
+    public override PowerType Type => PowerType.Buff;
+    public override PowerStackType StackType => PowerStackType.Counter;
+    public override string CustomPackedIconPath => "every_turn_power.png".PowerImagePath();
+    public override string CustomBigIconPath => "every_turn_power.png".BigPowerImagePath();
+
+    public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side,
+        IEnumerable<Creature> participants)
+    {
+        if (side == CombatSide.Player)
+        {
+            Flash();
+            await PowerCmd.Apply<EvasionPower>(choiceContext, Owner, 1m, Owner, null);
+            await PowerCmd.Decrement(this);
+        }
+    }
+}

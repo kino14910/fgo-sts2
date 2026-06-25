@@ -1,0 +1,34 @@
+using BaseLib.Utils;
+using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Models.Powers;
+using MegaCrit.Sts2.Core.ValueProps;
+
+namespace Fgo.FgoCode.Cards.NoblePhantasm;
+
+public class IraLupus : NobleCard
+{
+    public IraLupus() : base(1, CardType.Attack,
+        CardRarity.Rare, TargetType.AnyEnemy)
+    {
+        WithVars(new DamageVar(24m, ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move));
+        WithPower<VulnerablePower>(2, 1);
+    }
+
+    protected override async Task OnPlay(
+        PlayerChoiceContext choiceContext,
+        CardPlay play)
+    {
+        await CreatureCmd.Damage(choiceContext, play.Target!, DynamicVars.Damage.BaseValue,
+            ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, this);
+        await CommonActions.Apply<VulnerablePower>(choiceContext, play.Target!, play.Card);
+    }
+
+    protected override void OnUpgrade()
+    {
+        DynamicVars.Damage.UpgradeValueBy(3m);
+        DynamicVars.Vulnerable.UpgradeValueBy(1m);
+    }
+}

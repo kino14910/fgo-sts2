@@ -1,0 +1,12 @@
+{
+  "FGO-NP.title": "NP",
+  "FGO-NP.description": "Noble Phantasm gauge. At 100%+, you can use your Noble Phantasm.",
+  "FGO-STAR.title": "Critical Stars",
+  "FGO-STAR.description": "At 10+ stars, your next attack deals double damage and consumes 10 stars.",
+  "FGO-NP_DAMAGE.title": "NP Damage",
+  "FGO-NP_DAMAGE.description": "Increases NP attack damage by this percentage.",
+  "FGO-CRITICAL_DAMAGE.title": "Critical Damage",
+  "FGO-CRITICAL_DAMAGE.description": "Increases critical hit damage by this percentage.",
+  "FGO-EVIL_CURSE.title": "Evil Curse",
+  "FGO-EVIL_CURSE.description": "At the start of turn, lose HP equal to curse stacks."
+}

@@ -1,0 +1,12 @@
+{
+  "FGO-NP.title": "宝具值",
+  "FGO-NP.description": "宝具值。达到100%以上时可以使用宝具。",
+  "FGO-STAR.title": "暴击星",
+  "FGO-STAR.description": "达到10颗以上时，下一次攻击造成双倍伤害并消耗10颗暴击星。",
+  "FGO-NP_DAMAGE.title": "宝具威力",
+  "FGO-NP_DAMAGE.description": "宝具攻击伤害提升此百分比。",
+  "FGO-CRITICAL_DAMAGE.title": "暴击威力",
+  "FGO-CRITICAL_DAMAGE.description": "暴击伤害提升此百分比。",
+  "FGO-EVIL_CURSE.title": "诅呪",
+  "FGO-EVIL_CURSE.description": "回合开始时，失去等于诅呪层数的生命值。"
+}

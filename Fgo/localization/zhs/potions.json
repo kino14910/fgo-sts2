@@ -1,0 +1,12 @@
+{
+  "FGO-POTION_I_D.title": "Some Kind of Potion",
+  "FGO-POTION_I_D.description": "Little  pieces  that get put together  into a description.  Exactly how depends on the potion, and you can set it up however you want.",
+  "FGO-ELIXIROF_REJUVENATION.title": "返老还童的灵药",
+  "FGO-ELIXIROF_REJUVENATION.description": "回复 %d 点生命。移除你身上的所有负面效果。",
+  "FGO-EXTREMELY_SPICY_MAPO_TOFU.title": "罐装特辣麻婆豆腐",
+  "FGO-EXTREMELY_SPICY_MAPO_TOFU.description": "获得 40%*宝具值*或 40% 宝具威力 。",
+  "FGO-CURSE_POTION.title": "诅呪药水",
+  "FGO-CURSE_POTION.description": "给予 %d 层*诅呪*。",
+  "FGO-STAR_POTION.title": "星之药水",
+  "FGO-STAR_POTION.description": "获得 10 颗 暴击星 。"
+}
