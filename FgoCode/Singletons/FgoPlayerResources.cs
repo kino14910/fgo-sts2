@@ -1,9 +1,11 @@
 using BaseLib.Abstracts;
+using Fgo.FgoCode.Cards;
 using Fgo.FgoCode.Cards.NoblePhantasm;
 using Fgo.FgoCode.Commands;
 using Fgo.FgoCode.UI;
 using Fgo.FgoCode.Utils;
 using MegaCrit.Sts2.Core.Combat;
+using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -15,6 +17,9 @@ public class FgoPlayerResources() : CustomSingletonModel(HookType.Combat)
 {
     private const int MaxCommandSpell = 3;
     private const int MaxOverCharge = 4;
+    private const int BasicCritStars = 10;
+    private const int SpecialCritStars = 20;
+
     private int _commandSpell;
     private int _np;
     private bool _npButtonPressed;
@@ -38,13 +43,25 @@ public class FgoPlayerResources() : CustomSingletonModel(HookType.Combat)
         private set => _commandSpell = Math.Clamp(value, 0, MaxCommandSpell);
     }
 
-    public bool CanCrit => Stars >= 10;
+    public bool CanCrit => Stars >= BasicCritStars;
     public bool CanUseNp => Np >= 100;
     public bool CanUseCommandSpell => CommandSpell > 0;
     public int OverCharge { get; private set; }
 
     public int OverChargeLevel => OverCharge;
     public bool HasPendingNoblePhantasmSelection { get; private set; }
+
+    /// <summary>
+    /// 尝试消耗暴击星。返回实际消耗的数量（0=未触发）。
+    /// special=true 时按 SpecialCritStars(20) 消耗，否则按 BasicCritStars(10)。
+    /// </summary>
+    public int TryConsumeCritStars(bool special)
+    {
+        var required = special ? SpecialCritStars : BasicCritStars;
+        if (Stars < required) return 0;
+        ConsumeStars(required);
+        return required;
+    }
 
     public async Task AddNp(int amount, PlayerChoiceContext? choiceContext = null, Player? player = null)
     {
@@ -98,7 +115,7 @@ public class FgoPlayerResources() : CustomSingletonModel(HookType.Combat)
         return false;
     }
 
-    public void AddStars(int amount)
+    public void AddStars(int amount = 1)
     {
         Stars += amount;
         FgoCombatUi.UpdateAll();

@@ -1,5 +1,6 @@
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Commands.Builders;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
@@ -24,6 +25,11 @@ public class FifthForcePower : FgoPower
         if (cardSource is not { Type: CardType.Attack }) return 1m;
         if (!props.IsPoweredAttack()) return 1m;
         return (100m - DamageReduction) / 100m;
+    }
+
+    public override int ModifyAttackHitCount(AttackCommand attack, int hitCount)
+    {
+        return base.ModifyAttackHitCount(attack, hitCount * 2);
     }
 
     public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side,

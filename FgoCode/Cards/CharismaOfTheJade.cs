@@ -20,6 +20,6 @@ public class CharismaOfTheJade : FgoCard
         CardPlay play)
     {
         await CommonActions.CardAttack(this, play.Target!, DynamicVars["Hits"].IntValue, "vfx/vfx_attack_slash").Execute(choiceContext);
-        // Stars consumption for triple damage handled by FgoStarPower.ModifyDamageMultiplicative
+        // 暴击由 CriticalDamagePower 处理：Stars>=20 时消耗20星造成300%伤害，否则按基础暴击（Stars>=10消耗10星200%）
     }
 }

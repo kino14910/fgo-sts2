@@ -23,9 +23,6 @@ public static class FgoCombatUi
     private static readonly Color CritRed = new("ff4444");
 
     private static readonly string NpButtonPath = "np_button.png".CharacterUiPath();
-    private static readonly string CommandSpellButtonPath = "command_spell.png".CharacterUiPath();
-    private static readonly Color CommandSpellActive = new("ff6b6b");
-    private static readonly Color CommandSpellDisabled = new("666666");
 
     private static StyleBoxFlat? _npFillStyleActive;
     private static StyleBoxFlat? _npFillStyleDefault;
@@ -166,32 +163,25 @@ public static class FgoCombatUi
         button.AddChild(label);
     }
 
+    private static string GetCommandSpellImagePath(int count)
+    {
+        return $"ui/CommandSpell/CommandSpell{Math.Clamp(count, 0, 3)}.png".ImagePath();
+    }
+
     private static void BuildCommandSpellButton(VBoxContainer parent)
     {
-        var container = new HBoxContainer();
-        container.Name = "CommandSpellContainer";
-        container.AddThemeConstantOverride("separation", 4);
-        parent.AddChild(container);
-
         var button = new TextureButton();
         button.Name = "CommandSpellButton";
-        button.CustomMinimumSize = new Vector2(32f, 32f);
+        button.CustomMinimumSize = new Vector2(64f, 64f);
         button.IgnoreTextureSize = true;
         button.StretchMode = TextureButton.StretchModeEnum.KeepAspectCentered;
 
-        if (ResourceLoader.Exists(CommandSpellButtonPath))
-            button.TextureNormal = GD.Load<Texture2D>(CommandSpellButtonPath);
+        var path = GetCommandSpellImagePath(3);
+        if (ResourceLoader.Exists(path))
+            button.TextureNormal = GD.Load<Texture2D>(path);
 
         button.Pressed += OnCommandSpellButtonPressed;
-        container.AddChild(button);
-
-        var countLabel = new Label();
-        countLabel.Name = "CommandSpellCount";
-        countLabel.Text = "3";
-        countLabel.AddThemeFontSizeOverride("font_size", 14);
-        countLabel.AddThemeColorOverride("font_color", CommandSpellActive);
-        countLabel.VerticalAlignment = VerticalAlignment.Center;
-        container.AddChild(countLabel);
+        parent.AddChild(button);
     }
 
     public static void UpdateAll()
@@ -283,18 +273,17 @@ public static class FgoCombatUi
 
     private static void UpdateCommandSpell(IReadOnlyList<Control> nodes, int count)
     {
+        var path = GetCommandSpellImagePath(count);
+        var tex = ResourceLoader.Exists(path) ? GD.Load<Texture2D>(path) : null;
+
         foreach (var node in nodes)
         {
-            var countLabel = node.GetNodeOrNull<Label>("NpVBox/CommandSpellContainer/CommandSpellCount");
-            if (countLabel != null)
-            {
-                countLabel.Text = count.ToString();
-                countLabel.AddThemeColorOverride("font_color", count > 0 ? CommandSpellActive : CommandSpellDisabled);
-            }
-
-            var button = node.GetNodeOrNull<TextureButton>("NpVBox/CommandSpellContainer/CommandSpellButton");
+            var button = node.GetNodeOrNull<TextureButton>("NpVBox/CommandSpellButton");
             if (button != null)
+            {
+                if (tex != null) button.TextureNormal = tex;
                 button.Modulate = count > 0 ? new Color(1f, 1f, 1f) : new Color(1f, 1f, 1f, 0.4f);
+            }
         }
     }
 

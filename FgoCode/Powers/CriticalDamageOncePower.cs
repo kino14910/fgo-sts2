@@ -1,3 +1,4 @@
+using BaseLib.Abstracts;
 using Fgo.FgoCode.Extensions;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
@@ -8,23 +9,30 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Fgo.FgoCode.Powers;
 
-public class CriticalDamageOncePower : FgoTemporaryPower
+/// <summary>
+/// 一次性暴击威力 Power，叠加次数。
+/// 每层提供 200% 暴击伤害，每次暴击消耗一层，层数归零后移除。
+/// </summary>
+public class CriticalDamageOncePower : CriticalDamagePower, IHasSecondAmount
 {
-    public override PowerType Type => PowerType.Buff;
+    public int Amount2 { get; set; }
+    private const decimal OnceCritMultiplier = 1m; // 200% = 1 + 1
+
     public override PowerStackType StackType => PowerStackType.Counter;
-    public override string CustomPackedIconPath => "critical_damage_power.png".PowerImagePath();
-    public override string CustomBigIconPath => "critical_damage_power.png".BigPowerImagePath();
-    public override bool AllowNegative => true;
-
-    protected override bool RemoveAtEndOfTurn => false;
-
+    public CriticalDamageOncePower(){}
+    public CriticalDamageOncePower(Creature owner, int critPower, int stacks)
+    {
+        Owner = owner;
+        Amount = stacks;
+        Amount2 = critPower;
+        CritTriggered = false;
+    }
     public override decimal ModifyDamageMultiplicative(
         Creature? target, decimal amount, ValueProp props,
         Creature? dealer, CardModel? cardSource)
     {
-        if (Owner != dealer) return 1m;
-        if (!props.IsPoweredAttack()) return 1m;
-        return 1m + Amount / 100m;
+        CritTriggered = true;
+        return base.ModifyDamageMultiplicative(target, amount, props, dealer, cardSource) + Amount2 / 100m; // 200%
     }
 
     public override async Task AfterDamageGiven(
@@ -35,6 +43,10 @@ public class CriticalDamageOncePower : FgoTemporaryPower
         if (!props.IsPoweredAttack()) return;
         if (result.TotalDamage <= 0) return;
         Flash();
-        await PowerCmd.Remove(this);
+        await PowerCmd.Decrement(this);
+    }
+    public string GetSecondAmount()
+    {
+        return Amount2.ToString();
     }
 }

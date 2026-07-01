@@ -7,6 +7,7 @@ using Fgo.FgoCode.Singletons;
 using Fgo.FgoCode.Utils;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.Logging;
 
 namespace Fgo.FgoCode.Cards.NoblePhantasm;
 
@@ -16,6 +17,7 @@ public abstract class NobleCard : ConstructedCardModel
     protected NobleCard(int cost, CardType type, TargetType target)
         : base(cost, type, FgoEnums.NoblePhantasm, target)
     {
+        Log.Info(Id.ToString());
         WithKeywords(CardKeyword.Retain, CardKeyword.Exhaust);
     }
 

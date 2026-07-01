@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Fgo.FgoCode.Cards;
@@ -31,7 +32,7 @@ public class PeerlessStrike : FgoCard
         await CommonActions.CardAttack(this, play.Target!, vfx: "vfx/vfx_attack_heavy").Execute(choiceContext);
         // 升级前立即死亡，升级后回合结束时死亡
         if (IsUpgraded)
-            await CommonActions.ApplySelf<DeathChancePower>(choiceContext, play.Card, 100m);
+            await CommonActions.ApplySelf<DoomPower>(choiceContext, play.Card, 100m);
         else
             await CreatureCmd.Kill(Owner.Creature);
     }

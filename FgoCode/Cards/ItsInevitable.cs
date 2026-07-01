@@ -8,7 +8,7 @@ namespace Fgo.FgoCode.Cards;
 public class ItsInevitable : FgoCard
 {
     public ItsInevitable() : base(1, CardType.Attack,
-        CardRarity.Common, TargetType.Self)
+        CardRarity.Common, TargetType.AllEnemies)
     {
         WithDamage(4, 1);
         WithVar("Boost", 4, 1);

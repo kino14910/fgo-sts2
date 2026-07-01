@@ -25,7 +25,10 @@ public class FromTheWorldsEndPower : FgoPower
             {
                 Flash();
                 foreach (var enemy in combatState.HittableEnemies)
+                {
                     await PowerCmd.Apply<StrengthPower>(choiceContext, enemy, -1m, Owner, null);
+                    await PowerCmd.Apply<WeakPower>(choiceContext, enemy, 1m, Owner, null);
+                }
             }
 
             await PowerCmd.Decrement(this);

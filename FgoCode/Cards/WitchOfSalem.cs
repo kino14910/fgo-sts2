@@ -27,7 +27,7 @@ public class WitchOfSalem : FgoCard
         {
             await CommonActions.Apply<VulnerablePower>(choiceContext, enemy, play.Card);
             await CommonActions.Apply<WeakPower>(choiceContext, enemy, play.Card);
-            await CommonActions.Apply<DeathChancePower>(choiceContext, enemy, play.Card,
+            await CommonActions.Apply<DoomPower>(choiceContext, enemy, play.Card,
                 DynamicVars["TerrorChance"].BaseValue);
         }
 

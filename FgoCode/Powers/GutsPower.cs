@@ -1,3 +1,4 @@
+using Fgo.FgoCode.Commands;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
@@ -14,7 +15,6 @@ public class GutsPower : FgoPower
         if (creature != Owner || Amount <= 0) return;
 
         Flash();
-        await CreatureCmd.Heal(creature, Amount);
-        await PowerCmd.Remove<GutsPower>(creature);
+        await ReviveCmd.Execute(creature, Amount);
     }
 }

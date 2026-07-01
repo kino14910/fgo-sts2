@@ -4,11 +4,15 @@ using Fgo.FgoCode.Cards;
 using Fgo.FgoCode.Cards.DerivativeMash;
 using Fgo.FgoCode.Extensions;
 using Fgo.FgoCode.Relics;
+using Fgo.FgoCode.Singletons;
 using Fgo.FgoCode.UI;
 using Godot;
 using MegaCrit.Sts2.Core.Entities.Characters;
+using MegaCrit.Sts2.Core.Entities.Creatures;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Nodes.Combat;
+using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Fgo.FgoCode.Character;
 
@@ -73,5 +77,12 @@ public class Fgo : PlaceholderCharacterModel
         FgoCombatUi.AttachTo(visuals);
 
         return visuals;
+    }
+
+    public override Task AfterDamageGiven(PlayerChoiceContext choiceContext, Creature? dealer, DamageResult result, ValueProp props,
+        Creature target, CardModel? cardSource)
+    {
+        this.FgoRes().AddStars();
+        return base.AfterDamageGiven(choiceContext, dealer, result, props, target, cardSource);
     }
 }

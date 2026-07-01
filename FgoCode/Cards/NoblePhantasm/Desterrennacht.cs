@@ -22,7 +22,7 @@ public class Desterrennacht : NobleCard
     {
         // 给予所有敌人3层恐怖(60%概率)
         foreach (var enemy in CombatState!.HittableEnemies)
-            await CommonActions.Apply<DeathChancePower>(choiceContext, enemy, play.Card,
+            await CommonActions.Apply<DoomPower>(choiceContext, enemy, play.Card,
                 DynamicVars["TerrorChance"].BaseValue);
 
         await CommonActions.ApplySelf<StrengthPower>(choiceContext, play.Card);

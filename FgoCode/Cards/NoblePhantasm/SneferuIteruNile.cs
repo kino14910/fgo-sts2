@@ -21,7 +21,7 @@ public class SneferuIteruNile : NobleCard
         foreach (var enemy in CombatState!.HittableEnemies)
         {
             await CommonActions.Apply<VulnerablePower>(choiceContext, enemy, play.Card, 3m);
-            await CommonActions.Apply<DeathChancePower>(choiceContext, enemy, play.Card,
+            await CommonActions.Apply<DoomPower>(choiceContext, enemy, play.Card,
                 DynamicVars["DeathChance"].BaseValue);
         }
 
